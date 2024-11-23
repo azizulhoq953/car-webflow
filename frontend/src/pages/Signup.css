@@ -1,0 +1,85 @@
+/* Signup Container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Full viewport height */
+    /* background-color: #fff; */
+  }
+  
+  .signup-card {
+    background-color:#f4f7fc ;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .signup-card:hover {
+    transform: translateY(-5px); /* Slight elevation on hover */
+  }
+  
+  /* Title */
+  .signup-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Input Fields */
+  .signup-input {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensures padding doesn't overflow width */
+    transition: border-color 0.3s ease;
+  }
+  
+  .signup-input:focus {
+    outline: none;
+    border-color: #007bff; /* Change border color on focus */
+  }
+  
+  /* Submit Button */
+  .signup-submit-btn {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .signup-submit-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+  }
+  
+  .signup-submit-btn:active {
+    background-color: #004085; /* Even darker blue on click */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .signup-card {
+      padding: 20px;
+    }
+  
+    .signup-input {
+      font-size: 16px;
+    }
+  
+    .signup-submit-btn {
+      padding: 10px 15px;
+    }
+  }
+  
