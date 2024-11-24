@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './Admin.css'; // Import custom styles
-import Spinner from '../components/Spinner'; // Import custom spinner component
+import './Admin.css'; 
+import Spinner from '../components/Spinner'; 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -40,7 +40,7 @@ const Admin = () => {
   const handleEditClick = (forum) => {
     setEditingForum(forum);
     setUpdatedNote(forum.note);
-    setUpdatedTitle(forum.title);  // Set the title for editing
+    setUpdatedTitle(forum.title); 
     setUpdatedImages(null);
   };
 
@@ -51,7 +51,7 @@ const Admin = () => {
 
     const formData = new FormData();
     formData.append('note', updatedNote);
-    formData.append('title', updatedTitle);  // Include updated title
+    formData.append('title', updatedTitle);  
     if (updatedImages) {
       for (let i = 0; i < updatedImages.length; i++) {
         formData.append('images', updatedImages[i]);

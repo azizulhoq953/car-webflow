@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/User'); // Assuming a User model to check roles
+const User = require('../models/User');
 
 const authenticateUser = async (req, res, next) => {
   const token = req.header('Authorization')?.split(' ')[1]; // Expecting Bearer token

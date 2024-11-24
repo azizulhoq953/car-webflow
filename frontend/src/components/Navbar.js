@@ -13,7 +13,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    const isAdmin = localStorage.getItem('isAdmin') === 'true';  // Ensure this is correctly checked
+    const isAdmin = localStorage.getItem('isAdmin') === 'true';  
     // console.log('Auth State:', { token, isAdmin });
     setAuthState({ isAuthenticated: !!token, isAdmin });
   }, []);

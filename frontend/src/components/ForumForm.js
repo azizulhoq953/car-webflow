@@ -45,7 +45,7 @@ const TextModal = ({ isOpen, onClose, onSave, value }) => {
   );
 };
 
-// ForumForm Component
+
 const ForumForm = () => {
   const [forumRows, setForumRows] = useState([]);
   const [showImageUpload, setShowImageUpload] = useState(false);
@@ -350,7 +350,7 @@ const ForumForm = () => {
 };
 
 
-// Styling for the component
+
 const styles = {
   container: {
     display: 'flex',

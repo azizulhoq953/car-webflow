@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import authService from '../services/authService';
-import './Signup.css'; // Import the CSS file
+import './Signup.css'; 
 
 const Signup = () => {
   const [username, setUsername] = useState('');
@@ -13,7 +13,7 @@ const Signup = () => {
     try {
       await authService.signup(username, password);
       alert('Signup successful!');
-      navigate('/signing'); // Redirect to login page after successful signup
+      navigate('/signing'); 
     } catch (error) {
       alert('Error during signup: ' + error.message);
     }

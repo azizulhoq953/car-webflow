@@ -1,7 +1,6 @@
 
 import axios from 'axios';
-
-const API_URL = process.env.REACT_APP_BACKEND_URL;  // Update with your backend URL
+const API_URL = process.env.REACT_APP_BACKEND_URL;  
 
 const signup = async (username, password) => {
   const response = await axios.post(`${API_URL}/signup`, { username, password });

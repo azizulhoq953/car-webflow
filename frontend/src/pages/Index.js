@@ -1,5 +1,3 @@
-// src/pages/Index.js
-
 import React from 'react';
 import ForumForm from '../components/ForumForm';
 // import Navbar from '../components/Navbar';

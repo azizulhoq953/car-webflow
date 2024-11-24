@@ -2,11 +2,10 @@ const jwt = require('jsonwebtoken');
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const Forum = require('../models/Forum');  // Correct model import
-const authenticateUser = require('../middleware/authenticateUser');  // Adjust the path as necessary
-const Field = require('../models/Field');  // Make sure this is the correct path for your Field model
+const Forum = require('../models/Forum');  
+const authenticateUser = require('../middleware/authenticateUser');  
+const Field = require('../models/Field');  
 const router = express.Router();
-// const forumsController = require('../controller/forumsController');
 const verifyAdmin = require('../middleware/verifyAdmin');
 // Multer configuration for file uploads
 const storage = multer.diskStorage({
@@ -60,7 +59,7 @@ router.post('/', upload.array('images', 5), authenticateUser, async (req, res) =
   }
 });
 
-// added middlewre
+// added extra middlewre
 const authenticate = (req, res, next) => {
   const token = req.headers.authorization?.split(' ')[1];
   if (!token) {
@@ -68,7 +67,7 @@ const authenticate = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET); // Ensure JWT_SECRET is set
+    const decoded = jwt.verify(token, process.env.JWT_SECRET); 
     req.user = decoded;
     next();
   } catch (error) {
