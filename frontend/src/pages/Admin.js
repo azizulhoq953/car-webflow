@@ -18,7 +18,7 @@ const Admin = () => {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    console.log("Token:", token);  // Debugging token in localStorage
+    // console.log("Token:", token); 
     if (token) {
       setIsLoggedIn(true);  // User is logged in if a token exists
     }
@@ -92,7 +92,7 @@ const Admin = () => {
 
   const handleDelete = async (id) => {
     const token = localStorage.getItem('token');
-    console.log("Token:", token);  // Debugging token
+    // console.log("Token:", token); 
     
     if (!token) {
       toast.error('You must be logged in to delete a post');
